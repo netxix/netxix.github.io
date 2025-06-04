@@ -1,0 +1,70 @@
+{
+    "cpus": [
+        {
+            "id": "13600k",
+            "name": "Intel Core i5-13600K",
+            "performance": 85,
+            "price": 319.99,
+            "tier": "high-mid",
+            "cores": 14,
+            "threads": 20,
+            "baseSpeed": 3.5,
+            "boostSpeed": 5.1
+        },
+        {
+            "id": "7600x",
+            "name": "AMD Ryzen 5 7600X",
+            "performance": 82,
+            "price": 299.99,
+            "tier": "high-mid",
+            "cores": 6,
+            "threads": 12,
+            "baseSpeed": 4.7,
+            "boostSpeed": 5.3
+        },
+        {
+            "id": "13400f",
+            "name": "Intel Core i5-13400F",
+            "performance": 75,
+            "price": 239.99,
+            "tier": "mid",
+            "cores": 10,
+            "threads": 16,
+            "baseSpeed": 2.5,
+            "boostSpeed": 4.6
+        },
+        {
+            "id": "7500f",
+            "name": "AMD Ryzen 5 7500F",
+            "performance": 72,
+            "price": 229.99,
+            "tier": "mid",
+            "cores": 6,
+            "threads": 12,
+            "baseSpeed": 3.7,
+            "boostSpeed": 5.0
+        },
+        {
+            "id": "13100f",
+            "name": "Intel Core i3-13100F",
+            "performance": 60,
+            "price": 149.99,
+            "tier": "budget",
+            "cores": 4,
+            "threads": 8,
+            "baseSpeed": 3.4,
+            "boostSpeed": 4.5
+        },
+        {
+            "id": "4500",
+            "name": "AMD Ryzen 3 4500",
+            "performance": 55,
+            "price": 129.99,
+            "tier": "budget",
+            "cores": 6,
+            "threads": 12,
+            "baseSpeed": 3.6,
+            "boostSpeed": 4.1
+        }
+    ]
+}

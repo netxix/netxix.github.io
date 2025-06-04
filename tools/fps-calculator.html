@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de FPS - FirstBuilds</title>
+    <meta name="description" content="Calcula los FPS que obtendrás en juegos populares según tu CPU y GPU. Herramienta gratuita para elegir componentes para gaming.">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/tools.css">
+</head>
+<body>
+    <header>
+        <!-- Igual que index.html -->
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="/">FirstBuilds</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/tools/fps-calculator.html">Calculadora FPS</a></li>
+                <li><a href="/tools/bottleneck-checker.html">Detector Cuello de Botella</a></li>
+                <li><a href="/tools/upgrade-advisor.html">Recomendador</a></li>
+                <li><a href="/guias.html">Guías</a></li>
+                <li><a href="/componentes.html">Componentes</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <main class="tool-container">
+        <h1>Calculadora de FPS</h1>
+        <p class="tool-description">Descubre cuántos FPS obtendrás en tus juegos favoritos según tu CPU y GPU</p>
+
+        <div class="calculator-grid">
+            <div class="component-selector">
+                <form id="fps-calculator-form">
+                    <div class="form-group">
+                        <label for="cpu">Procesador (CPU)</label>
+                        <select id="cpu" name="cpu" required>
+                            <option value="">Selecciona CPU...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gpu">Tarjeta Gráfica (GPU)</label>
+                        <select id="gpu" name="gpu" required>
+                            <option value="">Selecciona GPU...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ram">Memoria RAM</label>
+                        <select id="ram" name="ram" required>
+                            <option value="8">8 GB</option>
+                            <option value="16">16 GB</option>
+                            <option value="32">32 GB</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="game">Juego</label>
+                        <select id="game" name="game" required>
+                            <option value="">Selecciona Juego...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resolution">Resolución</label>
+                        <select id="resolution" name="resolution" required>
+                            <option value="1080">1080p</option>
+                            <option value="1440">1440p</option>
+                            <option value="2160">4K</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn primary">Calcular FPS</button>
+                </form>
+            </div>
+
+            <div class="results">
+                <div id="fps-result" style="display: none;">
+                    <h2>Resultados</h2>
+                    <div class="fps-metrics">
+                        <div class="metric">
+                            <span class="label">FPS Promedio</span>
+                            <span id="avg-fps" class="value">0</span>
+                        </div>
+                        <div class="metric">
+                            <span class="label">FPS Mínimos</span>
+                            <span id="min-fps" class="value">0</span>
+                        </div>
+                        <div class="metric">
+                            <span class="label">FPS Máximos</span>
+                            <span id="max-fps" class="value">0</span>
+                        </div>
+                    </div>
+
+                    <div class="performance-rating">
+                        <h3>Valoración del Rendimiento</h3>
+                        <div id="rating-bar">
+                            <div class="rating-fill"></div>
+                        </div>
+                        <p id="rating-text"></p>
+                    </div>
+
+                    <div class="recommendations">
+                        <h3>Recomendaciones</h3>
+                        <ul id="recommendations-list"></ul>
+                    </div>
+
+                    <div class="amazon-links">
+                        <h3>Componentes Recomendados</h3>
+                        <div id="product-recommendations"></div>
+                    </div>
+                </div>
+
+                <!-- AdSense -->
+                <div class="ad-container">
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-format="fluid"
+                        data-ad-layout-key="-6t+ed+2i-1n-4w"
+                        data-ad-client="ca-pub-XXXXX"
+                        data-ad-slot="XXXXX"></ins>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Igual que index.html -->
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>FirstBuilds</h4>
+                <p>Tu guía para armar tu primera PC gaming</p>
+            </div>
+            <div class="footer-section">
+                <h4>Herramientas</h4>
+                <ul>
+                    <li><a href="/tools/fps-calculator.html">Calculadora FPS</a></li>
+                    <li><a href="/tools/bottleneck-checker.html">Detector Cuello de Botella</a></li>
+                    <li><a href="/tools/upgrade-advisor.html">Recomendador</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="/guias.html">Guías</a></li>
+                    <li><a href="/componentes.html">Componentes</a></li>
+                    <li><a href="/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FirstBuilds. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/fps-calculator.js"></script>
+</body>
+</html>
