@@ -139,6 +139,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializar menú móvil con animación
     // ...existing code...
+
+    // Inicializar AOS (Animate On Scroll)
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out',
+        once: true,
+        offset: 100
+    });
+
+    // Efecto parallax suave para el fondo del héroe
+    const heroBackground = document.querySelector('.hero-background');
+    if (heroBackground) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    }
+
+    // Efecto de brillo para las tarjetas de herramientas
+    const toolCards = document.querySelectorAll('.tool-card');
+    toolCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const { left, top, width, height } = card.getBoundingClientRect();
+            const x = ((e.clientX - left) / width) * 100;
+            const y = ((e.clientY - top) / height) * 100;
+            
+            card.style.setProperty('--shine-x', `${x}%`);
+            card.style.setProperty('--shine-y', `${y}%`);
+        });
+    });
+
+    // Animación suave para el scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 });
 
 // Agregar efecto de carga suave para imágenes

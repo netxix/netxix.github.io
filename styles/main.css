@@ -223,10 +223,113 @@ body {
     animation: fadeIn 0.5s ease-out;
 }
 
-.tool-card:hover, .guide-card:hover, .component-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-    background: var(--card-hover);
+.tool-card {
+    background: linear-gradient(135deg, var(--card-background) 0%, rgba(255,255,255,0.8) 100%);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 2.5rem;
+}
+
+.tool-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 1rem;
+    transform: rotate(-5deg);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover .tool-icon {
+    transform: rotate(0deg) scale(1.1);
+}
+
+.tool-content {
+    flex: 1;
+}
+
+.tool-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+    padding-left: 0.5rem;
+}
+
+.tool-features span {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.tool-features i {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+.btn-animated {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: var(--border-radius);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    position: relative;
+    font-weight: 600;
+}
+
+.btn-animated .btn-text {
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.btn-animated i {
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.btn-animated:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-animated:hover .btn-text {
+    transform: translateX(-3px);
+}
+
+.btn-animated:hover i {
+    transform: translateX(3px);
+}
+
+.btn-animated::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.btn-animated:hover::after {
+    transform: translateX(100%);
 }
 
 .tool-card::before {
@@ -243,6 +346,27 @@ body {
 
 .tool-card:hover::before {
     transform: scaleX(1);
+}
+
+.tool-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.1) 50%,
+        rgba(255,255,255,0) 100%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+}
+
+.tool-card:hover .tool-shine {
+    transform: translateX(100%);
 }
 
 /* Footer */
@@ -328,4 +452,16 @@ footer {
     .tools-grid, .guides-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Efectos de animación para las tarjetas */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
 }
