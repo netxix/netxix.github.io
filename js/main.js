@@ -88,6 +88,87 @@ function trackEvent(category, action, label) {
     });
 }
 
+// Animaciones y efectos visuales
+document.addEventListener('DOMContentLoaded', () => {
+    // Navbar scroll effect
+    const nav = document.querySelector('.main-nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+
+    // Animación de entrada para las cards
+    const cards = document.querySelectorAll('.tool-card, .guide-card, .component-card');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        observer.observe(card);
+    });
+
+    // Efecto hover para botones
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            btn.style.setProperty('--x', `${x}px`);
+            btn.style.setProperty('--y', `${y}px`);
+        });
+    });
+
+    // Efecto parallax suave en el hero
+    const hero = document.querySelector('.hero');
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+    });
+
+    // Inicializar menú móvil con animación
+    // ...existing code...
+});
+
+// Agregar efecto de carga suave para imágenes
+function loadImages() {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageOptions = {
+        threshold: 0,
+        rootMargin: '0px 0px 50px 0px'
+    };
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.add('fade-in');
+                observer.unobserve(img);
+            }
+        });
+    }, imageOptions);
+
+    images.forEach(img => imageObserver.observe(img));
+}
+
+// Inicializar todas las animaciones cuando el DOM esté listo
+window.addEventListener('load', () => {
+    loadImages();
+    // ...existing code...
+});
+
 // Exportar funciones y clases para uso en otras páginas
 window.PCTool = PCTool;
 window.utils = {
