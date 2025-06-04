@@ -1,10 +1,14 @@
 // Navegación responsive
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const menuDropdown = document.querySelector('.menu-dropdown');
+    const isMobile = window.innerWidth <= 768;
 
     menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+        menuDropdown.style.opacity = menuDropdown.style.opacity === '1' ? '0' : '1';
+        menuDropdown.style.visibility = menuDropdown.style.visibility === 'visible' ? 'hidden' : 'visible';
+        menuDropdown.style.transform = menuDropdown.style.transform === 'translateY(0px)' ? 'translateY(-10px)' : 'translateY(0)';
+        menuToggle.querySelector('i').style.transform = menuDropdown.style.opacity === '1' ? 'rotate(180deg)' : 'rotate(0deg)';
     });
 
     // Inicializar AdSense
