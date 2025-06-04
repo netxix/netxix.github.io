@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almacenamiento Gaming - FirstBuilds</title>
+    <meta name="description" content="Encuentra el mejor almacenamiento para tu PC gaming. Comparativas de SSDs NVMe, SATA y HDDs.">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/storage.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="/">FirstBuilds</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../tools/fps-calculator.html">Calculadora FPS</a></li>
+                <li><a href="../tools/bottleneck-checker.html">Detector Cuello de Botella</a></li>
+                <li><a href="../tools/upgrade-advisor.html">Recomendador</a></li>
+                <li><a href="../guias.html">Guías</a></li>
+                <li><a href="../componentes.html" class="active">Componentes</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero components-hero">
+            <h1>Almacenamiento Gaming</h1>
+            <p>Encuentra el almacenamiento perfecto para tus juegos</p>
+        </section>
+
+        <section class="storage-comparison">
+            <div class="storage-filters">
+                <select id="type-filter">
+                    <option value="all">Todos los tipos</option>
+                    <option value="nvme">SSD NVMe</option>
+                    <option value="sata-ssd">SSD SATA</option>
+                    <option value="hdd">Disco Duro (HDD)</option>
+                </select>
+                <select id="capacity-filter">
+                    <option value="all">Todas las capacidades</option>
+                    <option value="500">500GB</option>
+                    <option value="1000">1TB</option>
+                    <option value="2000">2TB</option>
+                    <option value="4000">4TB o más</option>
+                </select>
+                <select id="price-filter">
+                    <option value="all">Todos los precios</option>
+                    <option value="budget">Económico (< 100€)</option>
+                    <option value="midrange">Gama Media (100€ - 200€)</option>
+                    <option value="highend">Gama Alta (> 200€)</option>
+                </select>
+            </div>
+
+            <div class="storage-grid">
+                <!-- El contenido se cargará dinámicamente con JavaScript -->
+            </div>
+        </section>
+
+        <section class="guide-content">
+            <h2>Guía de Compra: Almacenamiento Gaming</h2>
+            
+            <h3>Tipos de Almacenamiento</h3>
+            <div class="storage-types-grid">
+                <div class="storage-type-card">
+                    <h4>SSD NVMe</h4>
+                    <ul>
+                        <li>Velocidades hasta 7000 MB/s</li>
+                        <li>Ideal para sistema operativo y juegos</li>
+                        <li>Tiempo de carga mínimo</li>
+                        <li>Mayor precio por GB</li>
+                    </ul>
+                </div>
+                <div class="storage-type-card">
+                    <h4>SSD SATA</h4>
+                    <ul>
+                        <li>Velocidades hasta 560 MB/s</li>
+                        <li>Buena opción económica</li>
+                        <li>Compatible con cualquier PC</li>
+                        <li>Precio moderado por GB</li>
+                    </ul>
+                </div>
+                <div class="storage-type-card">
+                    <h4>Disco Duro (HDD)</h4>
+                    <ul>
+                        <li>Velocidades hasta 200 MB/s</li>
+                        <li>Ideal para almacenamiento masivo</li>
+                        <li>Menor precio por GB</li>
+                        <li>Mayor tiempo de carga</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Recomendaciones por Uso</h3>
+            <div class="recommendations-list">
+                <div class="recommendation">
+                    <h4>Sistema Operativo</h4>
+                    <p>SSD NVMe de 500GB-1TB para máximo rendimiento</p>
+                </div>
+                <div class="recommendation">
+                    <h4>Juegos Favoritos</h4>
+                    <p>SSD NVMe o SATA de 1TB-2TB para tiempos de carga rápidos</p>
+                </div>
+                <div class="recommendation">
+                    <h4>Biblioteca de Juegos</h4>
+                    <p>HDD de 2TB-4TB para juegos menos jugados</p>
+                </div>
+                <div class="recommendation">
+                    <h4>Configuración Óptima</h4>
+                    <p>Combina un SSD NVMe para SO + SSD SATA para juegos + HDD para almacenamiento</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>FirstBuilds</h4>
+                <p>Tu guía para armar tu primera PC gaming</p>
+            </div>
+            <div class="footer-section">
+                <h4>Herramientas</h4>
+                <ul>
+                    <li><a href="../tools/fps-calculator.html">Calculadora FPS</a></li>
+                    <li><a href="../tools/bottleneck-checker.html">Detector Cuello de Botella</a></li>
+                    <li><a href="../tools/upgrade-advisor.html">Recomendador</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="../guias.html">Guías</a></li>
+                    <li><a href="../componentes.html">Componentes</a></li>
+                    <li><a href="../contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FirstBuilds. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/storage-filter.js"></script>
+</body>
+</html>
