@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes Gaming - FirstBuilds</title>
+    <meta name="description" content="Explora nuestra selección de componentes gaming: CPUs, GPUs, RAM, almacenamiento y más. Encuentra los mejores componentes para tu PC gaming.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main-nav.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="/">FirstBuilds</a>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="tools/fps-calculator.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Calculadora FPS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tools/bottleneck-checker.html">
+                            <i class="fas fa-microchip"></i>
+                            <span>Cuello de Botella</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tools/upgrade-advisor.html">
+                            <i class="fas fa-arrow-trend-up"></i>
+                            <span>Recomendador</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="guias.html">
+                            <i class="fas fa-book"></i>
+                            <span>Guías</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="componentes.html" class="active">
+                            <i class="fas fa-memory"></i>
+                            <span>Componentes</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="components-hero">
+            <div class="hero-content">
+                <h1>Componentes Gaming</h1>
+                <p class="hero-subtitle">Descubre los mejores componentes para tu PC gaming</p>
+            </div>
+            <div class="components-filters">
+                <div class="filter-group">
+                    <span class="filter-label">Ordenar por:</span>
+                    <select id="sort-filter">
+                        <option value="popular">Más populares</option>
+                        <option value="price-asc">Precio: Menor a mayor</option>
+                        <option value="price-desc">Precio: Mayor a menor</option>
+                        <option value="rating">Mejor valorados</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="components-grid" data-aos="fade-up">
+            <div class="component-category" data-aos="fade-up">
+                <a href="componentes/cpu.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="category-content">
+                        <h2>Procesadores (CPU)</h2>
+                        <p>AMD Ryzen & Intel Core</p>
+                        <ul class="category-highlights">
+                            <li><i class="fas fa-check"></i> Gaming de alto rendimiento</li>
+                            <li><i class="fas fa-check"></i> Streaming y multitarea</li>
+                            <li><i class="fas fa-check"></i> Overclocking</li>
+                        </ul>
+                        <span class="category-link">Ver procesadores <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="category-overlay"></div>
+                </a>
+            </div>
+
+            <div class="component-category" data-aos="fade-up" data-aos-delay="100">
+                <a href="componentes/gpu.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="category-content">
+                        <h2>Tarjetas Gráficas (GPU)</h2>
+                        <p>NVIDIA GeForce & AMD Radeon</p>
+                        <ul class="category-highlights">
+                            <li><i class="fas fa-check"></i> Ray Tracing</li>
+                            <li><i class="fas fa-check"></i> DLSS & FSR</li>
+                            <li><i class="fas fa-check"></i> 4K Gaming</li>
+                        </ul>
+                        <span class="category-link">Ver tarjetas gráficas <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="category-overlay"></div>
+                </a>
+            </div>
+
+            <div class="component-category" data-aos="fade-up" data-aos-delay="200">
+                <a href="componentes/ram.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-memory"></i>
+                    </div>
+                    <div class="category-content">
+                        <h2>Memoria RAM</h2>
+                        <p>DDR4 & DDR5</p>
+                        <ul class="category-highlights">
+                            <li><i class="fas fa-check"></i> Alto rendimiento</li>
+                            <li><i class="fas fa-check"></i> RGB personalizable</li>
+                            <li><i class="fas fa-check"></i> XMP & EXPO</li>
+                        </ul>
+                        <span class="category-link">Ver memorias <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="category-overlay"></div>
+                </a>
+            </div>
+
+            <div class="component-category" data-aos="fade-up" data-aos-delay="300">
+                <a href="componentes/almacenamiento.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-hdd"></i>
+                    </div>
+                    <div class="category-content">
+                        <h2>Almacenamiento</h2>
+                        <p>SSDs NVMe, SATA & HDDs</p>
+                        <ul class="category-highlights">
+                            <li><i class="fas fa-check"></i> Ultra velocidad</li>
+                            <li><i class="fas fa-check"></i> Alta capacidad</li>
+                            <li><i class="fas fa-check"></i> DirectStorage</li>
+                        </ul>
+                        <span class="category-link">Ver almacenamiento <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="category-overlay"></div>
+                </a>
+            </div>
+
+            <div class="component-category featured" data-aos="fade-up" data-aos-delay="400">
+                <a href="componentes/fuentes.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="category-content">
+                        <h2>Fuentes de Poder</h2>
+                        <p>Modulares & Certificadas</p>
+                        <ul class="category-highlights">
+                            <li><i class="fas fa-check"></i> 80+ Certificación</li>
+                            <li><i class="fas fa-check"></i> Cableado modular</li>
+                            <li><i class="fas fa-check"></i> ATX 3.0</li>
+                        </ul>
+                        <span class="category-link">Ver fuentes <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="category-overlay"></div>
+                </a>
+            </div>
+        </section>
+
+        <section class="components-guide" data-aos="fade-up">
+            <div class="guide-content">
+                <h2>¿No sabes por dónde empezar?</h2>
+                <p>Usa nuestro asistente para encontrar los componentes perfectos según tu presupuesto y necesidades</p>
+                <div class="guide-actions">
+                    <a href="tools/upgrade-advisor.html" class="btn primary glow">
+                        <i class="fas fa-magic"></i>
+                        <span>Usar Asistente</span>
+                    </a>
+                    <a href="guias/guia-componentes.html" class="btn secondary">
+                        <i class="fas fa-book"></i>
+                        <span>Leer Guía Completa</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-glow"></div>
+        <div class="footer-content">
+            <div class="footer-section brand">
+                <div class="footer-logo">
+                    <a href="/">FirstBuilds</a>
+                </div>
+                <p class="brand-description">Tu guía experta para armar tu primera PC gaming. Encuentra las mejores configuraciones y optimiza tu presupuesto.</p>
+            </div>
+
+            <div class="footer-section tools">
+                <h4><i class="fas fa-tools"></i> Herramientas</h4>
+                <ul class="footer-links-list">
+                    <li><a href="tools/fps-calculator.html"><i class="fas fa-tachometer-alt"></i> Calculadora FPS</a></li>
+                    <li><a href="tools/bottleneck-checker.html"><i class="fas fa-microchip"></i> Cuello de Botella</a></li>
+                    <li><a href="tools/upgrade-advisor.html"><i class="fas fa-arrow-trend-up"></i> Recomendador</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section resources">
+                <h4><i class="fas fa-book"></i> Recursos</h4>
+                <ul class="footer-links-list">
+                    <li><a href="guias.html"><i class="fas fa-graduation-cap"></i> Guías</a></li>
+                    <li><a href="componentes.html"><i class="fas fa-memory"></i> Componentes</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section newsletter">
+                <h4><i class="fas fa-envelope-open-text"></i> Newsletter</h4>
+                <p>Recibe las últimas guías y ofertas directamente en tu correo</p>
+                <form class="newsletter-form">
+                    <div class="input-group">
+                        <i class="fas fa-envelope input-icon"></i>
+                        <input type="email" placeholder="Tu email" required>
+                    </div>
+                    <button type="submit" class="btn btn-newsletter">
+                        <span>Suscribirse</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="copyright">
+                    <i class="far fa-copyright"></i> 2025 FirstBuilds. Todos los derechos reservados.
+                </p>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">Política de Privacidad</a>
+                    <a href="#" class="legal-link">Términos de Uso</a>
+                    <a href="#" class="legal-link">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
