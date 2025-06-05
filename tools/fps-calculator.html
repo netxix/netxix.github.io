@@ -7,6 +7,7 @@
     <meta name="description" content="Calcula los FPS que obtendrás en juegos populares según tu CPU y GPU. Herramienta gratuita para elegir componentes para gaming.">    <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/main-nav.css">
     <link rel="stylesheet" href="../styles/tools.css">
+    <link rel="stylesheet" href="../styles/fps-calculator.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -111,103 +112,150 @@
         </nav>
     </header>
 
-    <main class="tool-container">
-        <h1>Calculadora de FPS</h1>
-        <p class="tool-description">Descubre cuántos FPS obtendrás en tus juegos favoritos según tu CPU y GPU</p>
-
-        <div class="calculator-grid">
-            <div class="component-selector">
-                <form id="fps-calculator-form">
-                    <div class="form-group">
-                        <label for="cpu">Procesador (CPU)</label>
-                        <select id="cpu" name="cpu" required>
-                            <option value="">Selecciona CPU...</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="gpu">Tarjeta Gráfica (GPU)</label>
-                        <select id="gpu" name="gpu" required>
-                            <option value="">Selecciona GPU...</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="ram">Memoria RAM</label>
-                        <select id="ram" name="ram" required>
-                            <option value="8">8 GB</option>
-                            <option value="16">16 GB</option>
-                            <option value="32">32 GB</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="game">Juego</label>
-                        <select id="game" name="game" required>
-                            <option value="">Selecciona Juego...</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="resolution">Resolución</label>
-                        <select id="resolution" name="resolution" required>
-                            <option value="1080">1080p</option>
-                            <option value="1440">1440p</option>
-                            <option value="2160">4K</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn primary">Calcular FPS</button>
-                </form>
+    <main class="fps-calculator-container">
+        <h1>Calculadora de FPS Gaming</h1>
+        <p class="tool-description">Descubre el rendimiento que obtendrás en tus juegos favoritos según tu CPU y GPU</p>
+        
+        <form id="fps-calculator-form" class="fps-form">
+            <div class="form-group">
+                <label for="cpu">Procesador (CPU)</label>
+                <select id="cpu" required>
+                    <option value="">Seleccionar CPU...</option>
+                </select>
             </div>
-
-            <div class="results">
-                <div id="fps-result" style="display: none;">
-                    <h2>Resultados</h2>
-                    <div class="fps-metrics">
-                        <div class="metric">
-                            <span class="label">FPS Promedio</span>
-                            <span id="avg-fps" class="value">0</span>
-                        </div>
-                        <div class="metric">
-                            <span class="label">FPS Mínimos</span>
-                            <span id="min-fps" class="value">0</span>
-                        </div>
-                        <div class="metric">
-                            <span class="label">FPS Máximos</span>
-                            <span id="max-fps" class="value">0</span>
-                        </div>
+            
+            <div class="form-group">
+                <label for="gpu">Tarjeta Gráfica (GPU)</label>
+                <select id="gpu" required>
+                    <option value="">Seleccionar GPU...</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="game">Juego</label>
+                <select id="game" required>
+                    <option value="">Seleccionar juego...</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Resolución</label>
+                <div class="resolution-selector">
+                    <div class="resolution-option active" data-resolution="1080">
+                        <span>1080p</span>
+                        <small>Full HD</small>
                     </div>
-
-                    <div class="performance-rating">
-                        <h3>Valoración del Rendimiento</h3>
-                        <div id="rating-bar">
-                            <div class="rating-fill"></div>
-                        </div>
-                        <p id="rating-text"></p>
+                    <div class="resolution-option" data-resolution="1440">
+                        <span>1440p</span>
+                        <small>2K QHD</small>
                     </div>
-
-                    <div class="recommendations">
-                        <h3>Recomendaciones</h3>
-                        <ul id="recommendations-list"></ul>
-                    </div>
-
-                    <div class="amazon-links">
-                        <h3>Componentes Recomendados</h3>
-                        <div id="product-recommendations"></div>
+                    <div class="resolution-option" data-resolution="2160">
+                        <span>2160p</span>
+                        <small>4K UHD</small>
                     </div>
                 </div>
+            </div>
 
-                <!-- AdSense -->
-                <div class="ad-container">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-format="fluid"
-                        data-ad-layout-key="-6t+ed+2i-1n-4w"
-                        data-ad-client="ca-pub-XXXXX"
-                        data-ad-slot="XXXXX"></ins>
+            <div class="form-group">
+                <button type="submit" class="btn primary glow">
+                    <i class="fas fa-calculator"></i>
+                    <span>Calcular FPS</span>
+                </button>
+            </div>
+        </form>
+
+        <div class="settings-toggle">
+            <i class="fas fa-cog"></i>
+            <span>Configuración Avanzada</span>
+        </div>
+
+        <div class="settings-panel">
+            <div class="form-group">
+                <label for="ram">Memoria RAM</label>
+                <select id="ram">
+                    <option value="8">8GB</option>
+                    <option value="16" selected>16GB</option>
+                    <option value="32">32GB</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="settings">Calidad Gráfica</label>
+                <select id="settings">
+                    <option value="low">Baja</option>
+                    <option value="medium">Media</option>
+                    <option value="high" selected>Alta</option>
+                    <option value="ultra">Ultra</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="raytracing"> Ray Tracing
+                </label>
+                <label>
+                    <input type="checkbox" id="dlss"> DLSS/FSR
+                </label>
+            </div>
+        </div>
+
+        <div id="fps-result" class="fps-result">
+            <div class="result-header">
+                <h2 class="result-title">Resultados</h2>
+                <div class="share-buttons">
+                    <button class="btn secondary">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Compartir</span>
+                    </button>
                 </div>
             </div>
+
+            <div class="fps-charts">
+                <div class="fps-chart">
+                    <h3>FPS Promedio</h3>
+                    <div class="fps-meter">
+                        <canvas class="fps-gauge"></canvas>
+                        <div class="fps-number">0</div>
+                    </div>
+                </div>
+                <div class="fps-chart">
+                    <h3>FPS 1% Low</h3>
+                    <div class="fps-meter">
+                        <canvas class="fps-gauge"></canvas>
+                        <div class="fps-number">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="performance-tips">
+                <h3>Consejos de Optimización</h3>
+                <ul class="tips-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div class="tip-content">
+                            <strong>Actualiza tus drivers</strong>
+                            <p>Mantén los drivers de tu GPU actualizados para mejor rendimiento.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div class="tip-content">
+                            <strong>Optimiza la configuración</strong>
+                            <p>Ajusta la configuración gráfica para un mejor balance entre calidad y rendimiento.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div class="tip-content">
+                            <strong>Temperatura</strong>
+                            <p>Mantén tu PC limpio y bien ventilado para evitar thermal throttling.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="affiliate-section">
+            <h3>¿Quieres mejorar tu rendimiento?</h3>
+            <div class="upgrade-suggestions"></div>
         </div>
     </main>
 
@@ -240,7 +288,9 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/PCTool.js"></script>
     <script src="../js/fps-calculator.js"></script>
 </body>
 </html>

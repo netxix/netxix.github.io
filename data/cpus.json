@@ -3,68 +3,97 @@
         {
             "id": "13600k",
             "name": "Intel Core i5-13600K",
-            "performance": 85,
-            "price": 319.99,
-            "tier": "high-mid",
+            "performance": 1.2,
             "cores": 14,
             "threads": 20,
-            "baseSpeed": 3.5,
-            "boostSpeed": 5.1
+            "baseSpeed": "3.5 GHz",
+            "boostSpeed": "5.1 GHz",
+            "price": 319.99,
+            "tdp": 125,
+            "socket": "LGA 1700",
+            "generation": "13th Gen",
+            "affiliateUrl": "https://amazon.es/dp/B0BG63WLG3",
+            "specs": {
+                "cache": "24MB",
+                "memorySupport": "DDR4-3200/DDR5-5600",
+                "iGPU": "Intel UHD 770"
+            }
         },
         {
             "id": "7600x",
             "name": "AMD Ryzen 5 7600X",
-            "performance": 82,
-            "price": 299.99,
-            "tier": "high-mid",
+            "performance": 1.15,
             "cores": 6,
             "threads": 12,
-            "baseSpeed": 4.7,
-            "boostSpeed": 5.3
+            "baseSpeed": "4.7 GHz",
+            "boostSpeed": "5.3 GHz",
+            "price": 299.99,
+            "tdp": 105,
+            "socket": "AM5",
+            "generation": "Zen 4",
+            "affiliateUrl": "https://amazon.es/dp/B0BBJDS62N",
+            "specs": {
+                "cache": "32MB",
+                "memorySupport": "DDR5-5200",
+                "iGPU": "Radeon Graphics"
+            }
+        },
+        {
+            "id": "13900k",
+            "name": "Intel Core i9-13900K",
+            "performance": 1.5,
+            "cores": 24,
+            "threads": 32,
+            "baseSpeed": "3.0 GHz",
+            "boostSpeed": "5.8 GHz",
+            "price": 599.99,
+            "tdp": 125,
+            "socket": "LGA 1700",
+            "generation": "13th Gen",
+            "affiliateUrl": "https://amazon.es/dp/B0BG63ZQFH",
+            "specs": {
+                "cache": "36MB",
+                "memorySupport": "DDR4-3200/DDR5-5600",
+                "iGPU": "Intel UHD 770"
+            }
+        },
+        {
+            "id": "7950x",
+            "name": "AMD Ryzen 9 7950X",
+            "performance": 1.45,
+            "cores": 16,
+            "threads": 32,
+            "baseSpeed": "4.5 GHz",
+            "boostSpeed": "5.7 GHz",
+            "price": 699.99,
+            "tdp": 170,
+            "socket": "AM5",
+            "generation": "Zen 4",
+            "affiliateUrl": "https://amazon.es/dp/B0BBHD5D8Y",
+            "specs": {
+                "cache": "64MB",
+                "memorySupport": "DDR5-5200",
+                "iGPU": "Radeon Graphics"
+            }
         },
         {
             "id": "13400f",
             "name": "Intel Core i5-13400F",
-            "performance": 75,
-            "price": 239.99,
-            "tier": "mid",
+            "performance": 1.0,
             "cores": 10,
             "threads": 16,
-            "baseSpeed": 2.5,
-            "boostSpeed": 4.6
-        },
-        {
-            "id": "7500f",
-            "name": "AMD Ryzen 5 7500F",
-            "performance": 72,
-            "price": 229.99,
-            "tier": "mid",
-            "cores": 6,
-            "threads": 12,
-            "baseSpeed": 3.7,
-            "boostSpeed": 5.0
-        },
-        {
-            "id": "13100f",
-            "name": "Intel Core i3-13100F",
-            "performance": 60,
-            "price": 149.99,
-            "tier": "budget",
-            "cores": 4,
-            "threads": 8,
-            "baseSpeed": 3.4,
-            "boostSpeed": 4.5
-        },
-        {
-            "id": "4500",
-            "name": "AMD Ryzen 3 4500",
-            "performance": 55,
-            "price": 129.99,
-            "tier": "budget",
-            "cores": 6,
-            "threads": 12,
-            "baseSpeed": 3.6,
-            "boostSpeed": 4.1
+            "baseSpeed": "2.5 GHz",
+            "boostSpeed": "4.6 GHz",
+            "price": 239.99,
+            "tdp": 65,
+            "socket": "LGA 1700",
+            "generation": "13th Gen",
+            "affiliateUrl": "https://amazon.es/dp/B0BQZWS2G4",
+            "specs": {
+                "cache": "20MB",
+                "memorySupport": "DDR4-3200/DDR5-5600",
+                "iGPU": "None"
+            }
         }
     ]
 }
