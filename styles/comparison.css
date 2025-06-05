@@ -1,0 +1,153 @@
+/* Comparison Panel Styles */
+.comparison-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--surface-color);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 1.5rem;
+    display: none;
+}
+
+.comparison-table-container {
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--surface-alt-color);
+    border-radius: 0.5rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table th:not(:last-child),
+.comparison-table td:not(:last-child) {
+    border-right: 1px solid var(--border-color);
+}
+
+.comparison-table thead th {
+    background: var(--surface-color);
+    position: sticky;
+    top: 0;
+}
+
+.comparison-table th:first-child {
+    min-width: 200px;
+}
+
+.compared-item-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.compared-item-header img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.performance-row {
+    background: var(--surface-color);
+}
+
+.performance-bar {
+    position: relative;
+    height: 24px;
+    background: var(--surface-alt-color);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.performance-bar .bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 12px;
+}
+
+.performance-bar span {
+    position: relative;
+    z-index: 1;
+    padding: 0 0.5rem;
+    line-height: 24px;
+    color: white;
+    font-weight: 600;
+}
+
+.comparison-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+}
+
+.clear-comparison {
+    padding: 0.5rem 1rem;
+    background: var(--danger-color);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.clear-comparison:hover {
+    background: var(--danger-dark-color);
+}
+
+.compare-btn {
+    padding: 0.5rem 1rem;
+    background: var(--surface-alt-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.compare-btn:hover {
+    background: var(--surface-hover-color);
+}
+
+.compare-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .comparison-panel {
+        padding: 1rem;
+    }
+
+    .comparison-table th:first-child {
+        min-width: 150px;
+    }
+
+    .compared-item-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .compared-item-header img {
+        width: 36px;
+        height: 36px;
+    }
+}

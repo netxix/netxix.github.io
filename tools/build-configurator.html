@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurador de PC Gaming 2025 | FirstBuilds</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/build-configurator.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+</head>
+<body class="dark-theme">
+    <nav>
+        <!-- ...navigation... -->
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <h1>Configurador de PC Gaming</h1>
+            <p>Crea tu PC gaming ideal con componentes compatibles y recomendaciones personalizadas</p>
+        </header>
+
+        <div class="configurator-layout">
+            <div class="build-configurator">
+                <div id="build-summary"></div>
+                <div id="compatibility-issues"></div>
+                <div id="power-requirements"></div>
+            </div>
+
+            <div class="component-selection">
+                <div class="filter-section">
+                    <h2>Filtrar Componentes</h2>
+                    <div class="filters">
+                        <select id="component-type">
+                            <option value="cpu">Procesador</option>
+                            <option value="motherboard">Placa Base</option>
+                            <option value="ram">Memoria RAM</option>
+                            <option value="gpu">Tarjeta Gráfica</option>
+                            <option value="storage">Almacenamiento</option>
+                            <option value="psu">Fuente de Alimentación</option>
+                            <option value="case">Gabinete</option>
+                        </select>
+                        <div class="price-range">
+                            <label>Rango de Precio</label>
+                            <div id="price-slider"></div>
+                        </div>
+                        <div class="performance-range">
+                            <label>Nivel de Rendimiento</label>
+                            <div id="performance-slider"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="components-grid" id="filtered-components"></div>
+            </div>
+        </div>
+
+        <div class="prebuilt-suggestions">
+            <h2>Builds Recomendadas</h2>
+            <div class="prebuilt-grid">
+                <div class="prebuilt-card budget">
+                    <h3>Build Económica</h3>
+                    <ul class="specs-list">
+                        <li>AMD Ryzen 5 7500X</li>
+                        <li>NVIDIA RTX 4060</li>
+                        <li>16GB DDR5</li>
+                        <li>1TB NVMe SSD</li>
+                    </ul>
+                    <div class="prebuilt-price">799€</div>
+                    <button class="load-build">Cargar Build</button>
+                </div>
+
+                <div class="prebuilt-card balanced">
+                    <h3>Build Equilibrada</h3>
+                    <ul class="specs-list">
+                        <li>Intel Core i5-14600K</li>
+                        <li>NVIDIA RTX 4070</li>
+                        <li>32GB DDR5</li>
+                        <li>2TB NVMe SSD</li>
+                    </ul>
+                    <div class="prebuilt-price">1499€</div>
+                    <button class="load-build">Cargar Build</button>
+                </div>
+
+                <div class="prebuilt-card performance">
+                    <h3>Build Alto Rendimiento</h3>
+                    <ul class="specs-list">
+                        <li>Intel Core i9-14900K</li>
+                        <li>NVIDIA RTX 4090</li>
+                        <li>64GB DDR5</li>
+                        <li>4TB NVMe SSD</li>
+                    </ul>
+                    <div class="prebuilt-price">2999€</div>
+                    <button class="load-build">Cargar Build</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- ...footer... -->
+    </footer>
+
+    <script src="../js/PCTool.js"></script>
+    <script src="../js/compatibility-checker.js"></script>
+    <script src="../js/components/build-configurator.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
