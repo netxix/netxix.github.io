@@ -1,0 +1,221 @@
+/* Review System Styles */
+.reviews-container {
+    padding: 2rem;
+    background: var(--surface-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.reviews-summary {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.rating-average {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+}
+
+.big-rating {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stars-container {
+    color: #fbbf24;
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+.review-count {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.rating-bars {
+    flex-grow: 1;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.stars {
+    min-width: 60px;
+    color: #fbbf24;
+}
+
+.bar-container {
+    flex-grow: 1;
+    height: 8px;
+    background: var(--surface-alt-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.count {
+    min-width: 40px;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.review-actions {
+    margin-bottom: 2rem;
+}
+
+.write-review-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.write-review-btn:hover {
+    background: var(--primary-dark-color);
+}
+
+.write-review-btn:disabled {
+    background: var(--surface-alt-color);
+    cursor: not-allowed;
+}
+
+.review-form {
+    background: var(--surface-alt-color);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.rating-input {
+    font-size: 1.5rem;
+    color: #fbbf24;
+    margin: 1rem 0;
+}
+
+.review-star {
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.review-star:hover {
+    transform: scale(1.2);
+}
+
+.review-title-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    background: var(--surface-color);
+}
+
+.review-content-input {
+    width: 100%;
+    min-height: 120px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    background: var(--surface-color);
+    resize: vertical;
+}
+
+.review-card {
+    background: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.review-stars {
+    color: #fbbf24;
+}
+
+.review-date {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.review-author {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.review-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.review-content {
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.review-stats {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.helpful-btn {
+    padding: 0.375rem 0.75rem;
+    background: var(--surface-alt-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.helpful-btn:hover {
+    background: var(--surface-hover-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .reviews-summary {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .rating-average {
+        min-width: unset;
+    }
+
+    .review-card {
+        padding: 1rem;
+    }
+}

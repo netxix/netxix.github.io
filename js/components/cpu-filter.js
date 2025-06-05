@@ -1,127 +1,156 @@
 // Funciones para manejar el filtrado y visualización de CPUs
 document.addEventListener('DOMContentLoaded', function() {
-    let cpuData = [];
-    const productsGrid = document.querySelector('.products-grid');
-    const brandFilter = document.getElementById('brand-filter');
-    const coresFilter = document.getElementById('cores-filter');
-    const priceFilter = document.getElementById('price-filter');
-    const sortFilter = document.getElementById('sort-filter');
-
-    // Cargar datos de CPUs
-    fetch('../data/cpus.json')
-        .then(response => response.json())
-        .then(data => {
-            cpuData = data.cpus;
-            renderProducts(cpuData);
-        })
-        .catch(error => console.error('Error cargando datos de CPUs:', error));
-
-    // Event listeners para filtros
-    brandFilter?.addEventListener('change', applyFilters);
-    coresFilter?.addEventListener('change', applyFilters);
-    priceFilter?.addEventListener('change', applyFilters);
-    sortFilter?.addEventListener('change', applyFilters);
-
-    function renderProducts(products) {
-        productsGrid.innerHTML = '';
-        const template = document.getElementById('product-template');
-
-        products.forEach(cpu => {
-            const productCard = template.content.cloneNode(true);
-            
-            // Imagen
-            const img = productCard.querySelector('.product-image img');
-            img.src = cpu.image;
-            img.alt = cpu.name;
-
-            // Información básica
-            productCard.querySelector('.product-brand').textContent = cpu.brand;
-            productCard.querySelector('.product-title').textContent = cpu.name;
-            
-            // Especificaciones
-            productCard.querySelector('.cores').textContent = `${cpu.cores} núcleos / ${cpu.threads} hilos`;
-            productCard.querySelector('.clock').textContent = `${cpu.baseSpeed}GHz - ${cpu.boostSpeed}GHz`;
-            productCard.querySelector('.cache').textContent = `${cpu.cache}MB Cache`;
-
-            // Rating
-            const stars = '★'.repeat(Math.floor(cpu.rating)) + '☆'.repeat(5 - Math.floor(cpu.rating));
-            productCard.querySelector('.rating-stars').textContent = stars;
-            productCard.querySelector('.rating-count').textContent = `(${cpu.reviews} reviews)`;
-
-            // Stock
-            const stockStatus = productCard.querySelector('.stock-status');
-            if (cpu.stock > 10) {
-                stockStatus.textContent = 'En Stock';
-                stockStatus.classList.add('in-stock');
-            } else if (cpu.stock > 0) {
-                stockStatus.textContent = '¡Últimas unidades!';
-                stockStatus.classList.add('low-stock');
-            } else {
-                stockStatus.textContent = 'Sin Stock';
-                stockStatus.classList.add('out-stock');
-            }
-
-            // Precio
-            productCard.querySelector('.product-price').textContent = `${cpu.price.toFixed(2)}€`;
-
-            // Enlaces
-            const [amazonBtn, compareBtn] = productCard.querySelectorAll('.product-actions a');
-            amazonBtn.href = cpu.amazonUrl;
-            compareBtn.href = `compare.html?cpu=${cpu.id}`;
-
-            productsGrid.appendChild(productCard);
-        });
-    }
-
-    function applyFilters() {
-        let filteredProducts = [...cpuData];
-
-        // Filtro por marca
-        if (brandFilter?.value !== 'all') {
-            filteredProducts = filteredProducts.filter(cpu => 
-                cpu.brand.toLowerCase() === brandFilter.value
-            );
+    class CPUFilter {
+        constructor() {
+            this.products = [];
+            this.filters = {
+                price: { min: 0, max: Infinity },
+                brand: 'all',
+                performance: 'all'
+            };
+            this.init();
         }
 
-        // Filtro por núcleos
-        if (coresFilter?.value !== 'all') {
-            const cores = parseInt(coresFilter.value);
-            filteredProducts = filteredProducts.filter(cpu => 
-                cores === 12 ? cpu.cores >= cores : cpu.cores === cores
-            );
+        async init() {
+            await this.loadProducts();
+            this.setupFilters();
+            this.render();
         }
 
-        // Filtro por precio
-        if (priceFilter?.value !== 'all') {
-            switch(priceFilter.value) {
-                case 'budget':
-                    filteredProducts = filteredProducts.filter(cpu => cpu.price < 200);
-                    break;
-                case 'midrange':
-                    filteredProducts = filteredProducts.filter(cpu => cpu.price >= 200 && cpu.price <= 400);
-                    break;
-                case 'highend':
-                    filteredProducts = filteredProducts.filter(cpu => cpu.price > 400);
-                    break;
+        async loadProducts() {
+            try {
+                const response = await fetch('/data/cpus.json');
+                const data = await response.json();
+                this.products = data.cpus;
+                this.setupPriceRange();
+            } catch (error) {
+                console.error('Error cargando productos:', error);
             }
         }
 
-        // Ordenar
-        switch(sortFilter?.value) {
-            case 'price-asc':
-                filteredProducts.sort((a, b) => a.price - b.price);
-                break;
-            case 'price-desc':
-                filteredProducts.sort((a, b) => b.price - a.price);
-                break;
-            case 'rating':
-                filteredProducts.sort((a, b) => b.rating - a.rating);
-                break;
-            case 'popular':
-                filteredProducts.sort((a, b) => b.reviews - a.reviews);
-                break;
+        setupPriceRange() {
+            const prices = this.products.map(p => p.price);
+            const minPrice = Math.min(...prices);
+            const maxPrice = Math.max(...prices);
+            
+            const priceRange = document.querySelector('.price-range');
+            if (!priceRange) return;
+
+            noUiSlider.create(priceRange, {
+                start: [minPrice, maxPrice],
+                connect: true,
+                range: {
+                    'min': minPrice,
+                    'max': maxPrice
+                },
+                format: {
+                    to: value => Math.round(value),
+                    from: value => Number(value)
+                }
+            });
+
+            priceRange.noUiSlider.on('update', (values) => {
+                this.filters.price.min = values[0];
+                this.filters.price.max = values[1];
+                this.render();
+            });
         }
 
-        renderProducts(filteredProducts);
+        setupFilters() {
+            // Brand Filter
+            const brandFilter = document.querySelector('.brand-filter');
+            if (brandFilter) {
+                brandFilter.addEventListener('change', (e) => {
+                    this.filters.brand = e.target.value;
+                    this.render();
+                });
+            }
+
+            // Performance Filter
+            const performanceFilter = document.querySelector('.performance-filter');
+            if (performanceFilter) {
+                performanceFilter.addEventListener('change', (e) => {
+                    this.filters.performance = e.target.value;
+                    this.render();
+                });
+            }
+        }
+
+        filterProducts() {
+            return this.products.filter(product => {
+                const matchesPrice = product.price >= this.filters.price.min && 
+                                   product.price <= this.filters.price.max;
+                const matchesBrand = this.filters.brand === 'all' || 
+                                   product.brand.toLowerCase() === this.filters.brand;
+                
+                let matchesPerformance = true;
+                if (this.filters.performance !== 'all') {
+                    const perfLevel = this.getPerformanceLevel(product.performance);
+                    matchesPerformance = perfLevel === this.filters.performance;
+                }
+
+                return matchesPrice && matchesBrand && matchesPerformance;
+            });
+        }
+
+        getPerformanceLevel(score) {
+            if (score < 0.8) return 'entry';
+            if (score < 1.2) return 'mid';
+            return 'high';
+        }
+
+        formatPrice(price) {
+            return new Intl.NumberFormat('es-ES', {
+                style: 'currency',
+                currency: 'EUR'
+            }).format(price);
+        }
+
+        generateAmazonLink(asin) {
+            return `https://www.amazon.es/dp/${asin}?tag=firstbuilds-21`;
+        }
+
+        render() {
+            const container = document.getElementById('products-list');
+            if (!container) return;
+
+            const filteredProducts = this.filterProducts();
+            
+            container.innerHTML = filteredProducts.map(product => `
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" loading="lazy">
+                        ${product.stock ? '<span class="stock-badge">En Stock</span>' : ''}
+                    </div>
+                    <div class="product-content">
+                        <h3>${product.name}</h3>
+                        <div class="product-specs">
+                            <span><i class="fas fa-microchip"></i> ${product.cores} núcleos / ${product.threads} hilos</span>
+                            <span><i class="fas fa-tachometer-alt"></i> ${product.baseSpeed} - ${product.boostSpeed}</span>
+                            <span><i class="fas fa-chart-line"></i> Score: ${product.performance.toFixed(1)}</span>
+                        </div>
+                        <div class="product-features">
+                            ${product.features.map(feature => 
+                                `<span><i class="fas fa-check"></i> ${feature}</span>`
+                            ).join('')}
+                        </div>
+                        <div class="product-price">
+                            <span class="price">${this.formatPrice(product.price)}</span>
+                            <a href="${this.generateAmazonLink(product.asin)}" 
+                               class="btn btn-buy" 
+                               target="_blank"
+                               rel="noopener"
+                               onclick="trackAffiliateClick('cpu', '${product.name}')">
+                                <i class="fas fa-shopping-cart"></i>
+                                Comprar en Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
     }
+
+    // Inicializar el filtro cuando el DOM esté listo
+    new CPUFilter();
 });

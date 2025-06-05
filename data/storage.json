@@ -1,0 +1,119 @@
+{
+    "storage": [
+        {
+            "id": "samsung-990-pro",
+            "name": "Samsung 990 PRO 2TB NVMe Gen4",
+            "brand": "Samsung",
+            "type": "nvme",
+            "capacity": 2000,
+            "interface": "PCIe 4.0 x4",
+            "speed": {
+                "read": "7450MB",
+                "write": "6900MB"
+            },
+            "performance": 100,
+            "price": 199.99,
+            "stock": true,
+            "asin": "BXXXXXX1",
+            "image": "/images/storage/samsung-990-pro.jpg",
+            "recommendedUse": ["os", "games"],
+            "features": [
+                "NVMe PCIe 4.0",
+                "Samsung V-NAND",
+                "Hasta 7450 MB/s"
+            ]
+        },
+        {
+            "id": "wd-black-sn850x",
+            "name": "WD BLACK SN850X 2TB NVMe",
+            "brand": "Western Digital",
+            "type": "nvme",
+            "capacity": 2000,
+            "interface": "PCIe 4.0 x4",
+            "speed": {
+                "read": "7300MB",
+                "write": "6600MB"
+            },
+            "performance": 95,
+            "price": 189.99,
+            "stock": true,
+            "asin": "BXXXXXX2",
+            "image": "/images/storage/wd-sn850x.jpg",
+            "recommendedUse": ["os", "games"],
+            "features": [
+                "NVMe PCIe 4.0",
+                "Game Mode 2.0",
+                "Hasta 7300 MB/s"
+            ]
+        },
+        {
+            "id": "samsung-870-evo",
+            "name": "Samsung 870 EVO 1TB SATA",
+            "brand": "Samsung",
+            "type": "sata",
+            "capacity": 1000,
+            "interface": "SATA III",
+            "speed": {
+                "read": "560MB",
+                "write": "530MB"
+            },
+            "performance": 75,
+            "price": 89.99,
+            "stock": true,
+            "asin": "BXXXXXX3",
+            "image": "/images/storage/samsung-870-evo.jpg",
+            "recommendedUse": ["games", "storage"],
+            "features": [
+                "SATA III 6Gb/s",
+                "Samsung V-NAND",
+                "Hasta 560 MB/s"
+            ]
+        },
+        {
+            "id": "seagate-barracuda",
+            "name": "Seagate BarraCuda 4TB",
+            "brand": "Seagate",
+            "type": "hdd",
+            "capacity": 4000,
+            "interface": "SATA III",
+            "speed": {
+                "rpm": 5400,
+                "cache": "256MB"
+            },
+            "performance": 40,
+            "price": 89.99,
+            "stock": true,
+            "asin": "BXXXXXX4",
+            "image": "/images/storage/seagate-barracuda.jpg",
+            "recommendedUse": ["storage"],
+            "features": [
+                "5400 RPM",
+                "256MB Cache",
+                "Tecnología CMR"
+            ]
+        },
+        {
+            "id": "wd-black-hdd",
+            "name": "WD BLACK 6TB Performance",
+            "brand": "Western Digital",
+            "type": "hdd",
+            "capacity": 6000,
+            "interface": "SATA III",
+            "speed": {
+                "rpm": 7200,
+                "cache": "256MB"
+            },
+            "performance": 50,
+            "price": 189.99,
+            "stock": true,
+            "asin": "BXXXXXX5",
+            "image": "/images/storage/wd-black.jpg",
+            "recommendedUse": ["games", "storage"],
+            "features": [
+                "7200 RPM",
+                "256MB Cache",
+                "Tecnología CMR"
+            ]
+        }
+    ]
+}

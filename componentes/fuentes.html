@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuentes de Alimentación Gaming 2025 - FirstBuilds</title>
+    <meta name="description" content="Las mejores fuentes de alimentación para gaming en 2025. Guía de certificaciones 80+ y recomendaciones según tu configuración.">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/main-nav.css">
+    <link rel="stylesheet" href="/styles/components.css">
+    
+    <!-- noUiSlider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <!-- El contenido del nav se cargará desde nav.js -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="component-hero psu-hero">
+            <div class="container">
+                <h1>Fuentes de Alimentación Gaming 2025</h1>
+                <p class="section-description">Energía estable y eficiente para tu PC gaming</p>
+                
+                <!-- Calculadora de Potencia -->
+                <div class="power-calculator">
+                    <h2>Calculadora de Potencia Recomendada</h2>
+                    <div class="calculator-form">
+                        <div class="form-group">
+                            <label>CPU</label>
+                            <select id="cpu-power">
+                                <option value="0">Selecciona CPU</option>
+                                <!-- Options loaded from cpus.json -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>GPU</label>
+                            <select id="gpu-power">
+                                <option value="0">Selecciona GPU</option>
+                                <!-- Options loaded from gpus.json -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Ventiladores RGB</label>
+                            <input type="number" id="rgb-fans" min="0" max="10" value="0">
+                        </div>
+                        <button id="calculate-power" class="btn btn-primary">
+                            Calcular Potencia
+                        </button>
+                    </div>
+                    <div id="power-result" class="calculator-result">
+                        <div class="result-box">
+                            <span class="result-label">Potencia Mínima Recomendada:</span>
+                            <span class="result-value">-- W</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-label">Recomendación Extra:</span>
+                            <span class="result-recommendation">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-filters">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label>Rango de Precio</label>
+                        <div class="price-range"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Potencia</label>
+                        <select class="power-filter">
+                            <option value="all">Todas</option>
+                            <option value="650">650W o menos</option>
+                            <option value="850">850W</option>
+                            <option value="1000">1000W o más</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Certificación</label>
+                        <select class="certification-filter">
+                            <option value="all">Todas</option>
+                            <option value="bronze">80+ Bronze</option>
+                            <option value="gold">80+ Gold</option>
+                            <option value="platinum">80+ Platinum</option>
+                            <option value="titanium">80+ Titanium</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Modularidad</label>
+                        <select class="modularity-filter">
+                            <option value="all">Todas</option>
+                            <option value="full">Full Modular</option>
+                            <option value="semi">Semi Modular</option>
+                            <option value="none">No Modular</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-grid">
+            <div class="container">
+                <div id="products-list" class="products-container">
+                    <!-- Los productos se cargarán dinámicamente desde psu.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Guía de Certificaciones -->
+        <section class="certification-guide">
+            <div class="container">
+                <h2>Guía de Certificaciones 80 PLUS</h2>
+                <div class="cert-grid">
+                    <div class="cert-card bronze">
+                        <h3>80+ Bronze</h3>
+                        <p>Eficiencia del 85% a carga típica</p>
+                        <ul>
+                            <li>Ideal para builds económicas</li>
+                            <li>Ahorro energético básico</li>
+                            <li>Protecciones esenciales</li>
+                        </ul>
+                    </div>
+                    <div class="cert-card gold">
+                        <h3>80+ Gold</h3>
+                        <p>Eficiencia del 90% a carga típica</p>
+                        <ul>
+                            <li>Excelente relación calidad/precio</li>
+                            <li>Componentes de calidad</li>
+                            <li>Ideal para gaming</li>
+                        </ul>
+                    </div>
+                    <div class="cert-card platinum">
+                        <h3>80+ Platinum</h3>
+                        <p>Eficiencia del 92% a carga típica</p>
+                        <ul>
+                            <li>Premium build quality</li>
+                            <li>Máximo ahorro energético</li>
+                            <li>Para builds de alto rendimiento</li>
+                        </ul>
+                    </div>
+                    <div class="cert-card titanium">
+                        <h3>80+ Titanium</h3>
+                        <p>Eficiencia del 94% a carga típica</p>
+                        <ul>
+                            <li>Lo mejor de lo mejor</li>
+                            <li>Máxima eficiencia</li>
+                            <li>Para entusiastas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <!-- El contenido del footer se cargará desde main.js -->
+    </footer>
+
+    <script src="/js/nav.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/components/psu-filter.js"></script>
+    <script src="/js/components/power-calculator.js"></script>
+</body>
+</html>

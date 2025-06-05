@@ -390,3 +390,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     const analyzer = new PerformanceAnalyzer();
     await analyzer.initialize();
 });
+
+// Initialize modules for component pages
+if (document.querySelector('.component-page')) {
+    // Performance analyzer
+    const analyzer = new PerformanceAnalyzer();
+    
+    // Price tracker
+    const priceTracker = new PriceTracker();
+    const componentId = new URLSearchParams(window.location.search).get('id');
+    if (componentId) {
+        priceTracker.displayPriceChart(componentId, 'price-chart');
+    }
+    
+    // Review system
+    const reviewSystem = new ReviewSystem();
+    if (componentId) {
+        reviewSystem.loadReviews(componentId);
+    }
+    
+    // Compatibility checker
+    const compatibilityChecker = new CompatibilityChecker();
+    document.querySelectorAll('.add-to-build').forEach(btn => {
+        btn.addEventListener('click', e => {
+            const component = JSON.parse(e.target.dataset.component);
+            compatibilityChecker.addComponent(component.type, component);
+        });
+    });
+}
+
+// Initialize FPS Calculator if present
+if (document.getElementById('fps-calculator-form')) {
+    const calculator = new FPSCalculator();
+}

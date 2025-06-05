@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placas Base Gaming 2025 - FirstBuilds</title>
+    <meta name="description" content="Las mejores placas base para gaming en 2025. Comparativa de modelos, chipsets y características para tu PC gaming.">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/main-nav.css">
+    <link rel="stylesheet" href="/styles/components.css">
+    
+    <!-- noUiSlider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <!-- El contenido del nav se cargará desde nav.js -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="component-hero motherboard-hero">
+            <div class="container">
+                <h1>Placas Base Gaming 2025</h1>
+                <p class="section-description">La base perfecta para tu configuración gaming</p>
+                
+                <!-- Compatibility Checker -->
+                <div class="compatibility-checker">
+                    <h2>Comprobador de Compatibilidad</h2>
+                    <div class="checker-form">
+                        <div class="form-group">
+                            <label>CPU</label>
+                            <select id="cpu-check">
+                                <option value="">Selecciona CPU</option>
+                                <!-- Options loaded from cpus.json -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>RAM</label>
+                            <select id="ram-check">
+                                <option value="">Selecciona RAM</option>
+                                <!-- Options loaded from ram.json -->
+                            </select>
+                        </div>
+                        <button id="check-compatibility" class="btn btn-primary">
+                            Comprobar Compatibilidad
+                        </button>
+                    </div>
+                    <div id="compatibility-result" class="checker-result"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-filters">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label>Rango de Precio</label>
+                        <div class="price-range"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Socket</label>
+                        <select class="socket-filter">
+                            <option value="all">Todos</option>
+                            <option value="am5">AMD AM5</option>
+                            <option value="lga1700">Intel LGA1700</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Chipset</label>
+                        <select class="chipset-filter">
+                            <option value="all">Todos</option>
+                            <option value="x670e">AMD X670E</option>
+                            <option value="x670">AMD X670</option>
+                            <option value="b650e">AMD B650E</option>
+                            <option value="b650">AMD B650</option>
+                            <option value="z790">Intel Z790</option>
+                            <option value="b760">Intel B760</option>
+                            <option value="h770">Intel H770</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Factor de Forma</label>
+                        <select class="form-filter">
+                            <option value="all">Todos</option>
+                            <option value="atx">ATX</option>
+                            <option value="matx">Micro-ATX</option>
+                            <option value="itx">Mini-ITX</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Guide -->
+        <section class="features-guide">
+            <div class="container">
+                <h2>Guía de Características</h2>
+                <div class="features-grid">
+                    <div class="feature-card pcie">
+                        <i class="fas fa-microchip"></i>
+                        <h3>PCIe 5.0</h3>
+                        <p>Mayor ancho de banda para GPUs y SSDs de última generación</p>
+                    </div>
+                    <div class="feature-card ddr5">
+                        <i class="fas fa-memory"></i>
+                        <h3>DDR5</h3>
+                        <p>Soporte para memorias DDR5 de alta velocidad</p>
+                    </div>
+                    <div class="feature-card wifi6e">
+                        <i class="fas fa-wifi"></i>
+                        <h3>WiFi 6E</h3>
+                        <p>Conectividad inalámbrica de última generación</p>
+                    </div>
+                    <div class="feature-card thunderbolt">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Thunderbolt 4</h3>
+                        <p>Conectividad de alta velocidad para dispositivos externos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-grid">
+            <div class="container">
+                <div id="products-list" class="products-container">
+                    <!-- Los productos se cargarán dinámicamente desde motherboards.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Socket Comparison -->
+        <section class="socket-comparison">
+            <div class="container">
+                <h2>Comparativa de Sockets</h2>
+                <div class="comparison-table">
+                    <div class="table-row header">
+                        <div class="cell">Característica</div>
+                        <div class="cell">AM5</div>
+                        <div class="cell">LGA1700</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="cell">Generación</div>
+                        <div class="cell">AMD Ryzen 7000</div>
+                        <div class="cell">Intel 12th-14th Gen</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="cell">Memoria</div>
+                        <div class="cell">DDR5</div>
+                        <div class="cell">DDR4/DDR5</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="cell">PCIe</div>
+                        <div class="cell">PCIe 5.0</div>
+                        <div class="cell">PCIe 5.0</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <!-- El contenido del footer se cargará desde main.js -->
+    </footer>
+
+    <script src="/js/nav.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/components/motherboard-filter.js"></script>
+    <script src="/js/components/compatibility-checker.js"></script>
+</body>
+</html>

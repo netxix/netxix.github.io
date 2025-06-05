@@ -1,99 +1,109 @@
 {
     "cpus": [
         {
-            "id": "13600k",
-            "name": "Intel Core i5-13600K",
-            "performance": 1.2,
-            "cores": 14,
-            "threads": 20,
-            "baseSpeed": "3.5 GHz",
-            "boostSpeed": "5.1 GHz",
-            "price": 319.99,
-            "tdp": 125,
-            "socket": "LGA 1700",
-            "generation": "13th Gen",
-            "affiliateUrl": "https://amazon.es/dp/B0BG63WLG3",
-            "specs": {
-                "cache": "24MB",
-                "memorySupport": "DDR4-3200/DDR5-5600",
-                "iGPU": "Intel UHD 770"
-            }
-        },
-        {
-            "id": "7600x",
-            "name": "AMD Ryzen 5 7600X",
-            "performance": 1.15,
-            "cores": 6,
-            "threads": 12,
-            "baseSpeed": "4.7 GHz",
-            "boostSpeed": "5.3 GHz",
-            "price": 299.99,
-            "tdp": 105,
-            "socket": "AM5",
-            "generation": "Zen 4",
-            "affiliateUrl": "https://amazon.es/dp/B0BBJDS62N",
-            "specs": {
-                "cache": "32MB",
-                "memorySupport": "DDR5-5200",
-                "iGPU": "Radeon Graphics"
-            }
-        },
-        {
-            "id": "13900k",
-            "name": "Intel Core i9-13900K",
-            "performance": 1.5,
+            "id": "14900k",
+            "name": "Intel Core i9-14900K",
+            "brand": "intel",
             "cores": 24,
             "threads": 32,
-            "baseSpeed": "3.0 GHz",
+            "baseSpeed": "3.8 GHz",
             "boostSpeed": "5.8 GHz",
-            "price": 599.99,
+            "cache": "36MB",
             "tdp": 125,
-            "socket": "LGA 1700",
-            "generation": "13th Gen",
-            "affiliateUrl": "https://amazon.es/dp/B0BG63ZQFH",
-            "specs": {
-                "cache": "36MB",
-                "memorySupport": "DDR4-3200/DDR5-5600",
-                "iGPU": "Intel UHD 770"
-            }
+            "performance": 1.8,
+            "price": 599.99,
+            "stock": true,
+            "asin": "BXXXXXX1",
+            "image": "/images/cpus/14900k.jpg",
+            "features": [
+                "PCIe 5.0",
+                "DDR5-5600",
+                "Overclocking"
+            ]
         },
         {
             "id": "7950x",
             "name": "AMD Ryzen 9 7950X",
-            "performance": 1.45,
-            "cores": 16,
-            "threads": 32,
-            "baseSpeed": "4.5 GHz",
+            "brand": "amd",
+            "cores": 24,
+            "threads": 48,
+            "baseSpeed": "4.2 GHz",
             "boostSpeed": "5.7 GHz",
-            "price": 699.99,
-            "tdp": 170,
-            "socket": "AM5",
-            "generation": "Zen 4",
-            "affiliateUrl": "https://amazon.es/dp/B0BBHD5D8Y",
-            "specs": {
-                "cache": "64MB",
-                "memorySupport": "DDR5-5200",
-                "iGPU": "Radeon Graphics"
-            }
+            "cache": "64MB",
+            "tdp": 120,
+            "performance": 1.7,
+            "price": 549.99,
+            "stock": true,
+            "asin": "BXXXXXX2",
+            "image": "/images/cpus/7950x.jpg",
+            "features": [
+                "PCIe 5.0",
+                "DDR5-5200",
+                "Overclock"
+            ]
         },
         {
-            "id": "13400f",
-            "name": "Intel Core i5-13400F",
-            "performance": 1.0,
-            "cores": 10,
-            "threads": 16,
-            "baseSpeed": "2.5 GHz",
-            "boostSpeed": "4.6 GHz",
-            "price": 239.99,
-            "tdp": 65,
-            "socket": "LGA 1700",
-            "generation": "13th Gen",
-            "affiliateUrl": "https://amazon.es/dp/B0BQZWS2G4",
-            "specs": {
-                "cache": "20MB",
-                "memorySupport": "DDR4-3200/DDR5-5600",
-                "iGPU": "None"
-            }
+            "id": "14700k",
+            "name": "Intel Core i7-14700K",
+            "brand": "intel",
+            "cores": 20,
+            "threads": 28,
+            "baseSpeed": "3.6 GHz",
+            "boostSpeed": "5.5 GHz",
+            "cache": "30MB",
+            "tdp": 125,
+            "performance": 1.5,
+            "price": 409.99,
+            "stock": true,
+            "asin": "BXXXXXX3",
+            "image": "/images/cpus/14700k.jpg",
+            "features": [
+                "PCIe 5.0",
+                "DDR5-5600",
+                "Overclocking"
+            ]
+        },
+        {
+            "id": "7800x",
+            "name": "AMD Ryzen 7 7800X",
+            "brand": "amd",
+            "cores": 16,
+            "threads": 32,
+            "baseSpeed": "4.0 GHz",
+            "boostSpeed": "5.4 GHz",
+            "cache": "32MB",
+            "tdp": 105,
+            "performance": 1.4,
+            "price": 349.99,
+            "stock": true,
+            "asin": "BXXXXXX4",
+            "image": "/images/cpus/7800x.jpg",
+            "features": [
+                "PCIe 5.0",
+                "DDR5-5200",
+                "Overclock"
+            ]
+        },
+        {
+            "id": "14600k",
+            "name": "Intel Core i5-14600K",
+            "brand": "intel",
+            "cores": 14,
+            "threads": 20,
+            "baseSpeed": "3.5 GHz",
+            "boostSpeed": "5.1 GHz",
+            "cache": "24MB",
+            "tdp": 125,
+            "performance": 1.2,
+            "price": 299.99,
+            "stock": true,
+            "asin": "BXXXXXX5",
+            "image": "/images/cpus/14600k.jpg",
+            "features": [
+                "PCIe 5.0",
+                "DDR5-5600",
+                "Overclocking"
+            ]
         }
     ]
 }

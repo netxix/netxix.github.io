@@ -1,0 +1,109 @@
+{
+    "ram": [
+        {
+            "id": "gskill-trident-ddr5",
+            "name": "G.SKILL Trident Z5 RGB DDR5-6400",
+            "brand": "G.SKILL",
+            "type": "DDR5",
+            "capacity": 32,
+            "speed": "ddr5-6400",
+            "latency": 32,
+            "modules": 2,
+            "rgb": true,
+            "performance": 95,
+            "price": 289.99,
+            "stock": true,
+            "asin": "BXXXXXX1",
+            "image": "/images/ram/gskill-trident-z5.jpg",
+            "features": [
+                "DDR5-6400 CL32",
+                "RGB Sincronizable",
+                "XMP 3.0"
+            ]
+        },
+        {
+            "id": "corsair-dominator-ddr5",
+            "name": "Corsair Dominator Platinum RGB DDR5-6200",
+            "brand": "Corsair",
+            "type": "DDR5",
+            "capacity": 32,
+            "speed": "ddr5-6200",
+            "latency": 36,
+            "modules": 2,
+            "rgb": true,
+            "performance": 90,
+            "price": 269.99,
+            "stock": true,
+            "asin": "BXXXXXX2",
+            "image": "/images/ram/corsair-dominator.jpg",
+            "features": [
+                "DDR5-6200 CL36",
+                "iCUE Compatible",
+                "XMP 3.0"
+            ]
+        },
+        {
+            "id": "crucial-ddr5",
+            "name": "Crucial DDR5-5600 32GB",
+            "brand": "Crucial",
+            "type": "DDR5",
+            "capacity": 32,
+            "speed": "ddr5-5600",
+            "latency": 40,
+            "modules": 2,
+            "rgb": false,
+            "performance": 85,
+            "price": 189.99,
+            "stock": true,
+            "asin": "BXXXXXX3",
+            "image": "/images/ram/crucial-ddr5.jpg",
+            "features": [
+                "DDR5-5600 CL40",
+                "Perfil bajo",
+                "XMP 3.0"
+            ]
+        },
+        {
+            "id": "gskill-ripjaws-ddr4",
+            "name": "G.SKILL Ripjaws V DDR4-3600",
+            "brand": "G.SKILL",
+            "type": "DDR4",
+            "capacity": 32,
+            "speed": "ddr4-3600",
+            "latency": 16,
+            "modules": 2,
+            "rgb": false,
+            "performance": 80,
+            "price": 129.99,
+            "stock": true,
+            "asin": "BXXXXXX4",
+            "image": "/images/ram/gskill-ripjaws.jpg",
+            "features": [
+                "DDR4-3600 CL16",
+                "Bajo perfil",
+                "XMP 2.0"
+            ]
+        },
+        {
+            "id": "corsair-vengeance-ddr4",
+            "name": "Corsair Vengeance RGB Pro DDR4-3200",
+            "brand": "Corsair",
+            "type": "DDR4",
+            "capacity": 16,
+            "speed": "ddr4-3200",
+            "latency": 16,
+            "modules": 2,
+            "rgb": true,
+            "performance": 75,
+            "price": 89.99,
+            "stock": true,
+            "asin": "BXXXXXX5",
+            "image": "/images/ram/corsair-vengeance.jpg",
+            "features": [
+                "DDR4-3200 CL16",
+                "RGB iCUE",
+                "XMP 2.0"
+            ]
+        }
+    ]
+}

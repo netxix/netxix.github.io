@@ -1,94 +1,124 @@
 {
     "gpus": [
         {
-            "id": "rtx4070",
-            "name": "NVIDIA RTX 4070",
-            "performance": 1.3,
-            "vram": "12GB GDDR6X",
-            "rtxSupport": true,
-            "dlssSupport": true,
-            "tdp": 200,
-            "price": 599.99,
-            "recommendedPsu": 650,
-            "affiliateUrl": "https://amazon.es/dp/B0BWRW42Y1",
-            "specs": {
-                "boostClock": "2475 MHz",
-                "memorySpeed": "21 Gbps",
-                "rayTracingPerformance": 1.2,
-                "dlssVersion": "3.0"
-            }
+            "id": "rtx5090",
+            "name": "NVIDIA GeForce RTX 5090",
+            "brand": "nvidia",
+            "architecture": "Ada Next",
+            "vram": 32,
+            "boostClock": "3200",
+            "rayTracing": true,
+            "dlss": true,
+            "performance": 1.8,
+            "performance1080p": 100,
+            "performance1440p": 100,
+            "performance4k": 95,
+            "price": 1999.99,
+            "stock": true,
+            "asin": "BXXXXXX1",
+            "image": "/images/gpus/rtx5090.jpg",
+            "features": [
+                "Ray Tracing 5.0",
+                "DLSS 4.0",
+                "PCIe 5.0",
+                "DisplayPort 2.1"
+            ]
         },
         {
-            "id": "rx7900xt",
-            "name": "AMD RX 7900 XT",
-            "performance": 1.4,
-            "vram": "20GB GDDR6",
-            "rtxSupport": false,
-            "dlssSupport": true,
-            "tdp": 315,
-            "price": 899.99,
-            "recommendedPsu": 750,
-            "affiliateUrl": "https://amazon.es/dp/B0BMKM4864",
-            "specs": {
-                "boostClock": "2500 MHz",
-                "memorySpeed": "20 Gbps",
-                "rayTracingPerformance": 0.9,
-                "fsrVersion": "3.0"
-            }
-        },
-        {
-            "id": "rtx4060ti",
-            "name": "NVIDIA RTX 4060 Ti",
-            "performance": 1.1,
-            "vram": "8GB GDDR6",
-            "rtxSupport": true,
-            "dlssSupport": true,
-            "tdp": 160,
-            "price": 449.99,
-            "recommendedPsu": 600,
-            "affiliateUrl": "https://amazon.es/dp/B0C7GCHKH5",
-            "specs": {
-                "boostClock": "2535 MHz",
-                "memorySpeed": "18 Gbps",
-                "rayTracingPerformance": 1.0,
-                "dlssVersion": "3.0"
-            }
-        },
-        {
-            "id": "rx7600",
-            "name": "AMD RX 7600",
-            "performance": 1.0,
-            "vram": "8GB GDDR6",
-            "rtxSupport": false,
-            "dlssSupport": true,
-            "tdp": 165,
-            "price": 299.99,
-            "recommendedPsu": 550,
-            "affiliateUrl": "https://amazon.es/dp/B0C5GFHVZ2",
-            "specs": {
-                "boostClock": "2250 MHz",
-                "memorySpeed": "18 Gbps",
-                "rayTracingPerformance": 0.7,
-                "fsrVersion": "3.0"
-            }
-        },
-        {
-            "id": "rtx4080",
-            "name": "NVIDIA RTX 4080",
-            "performance": 1.6,
-            "vram": "16GB GDDR6X",
-            "rtxSupport": true,
-            "dlssSupport": true,
-            "tdp": 320,
+            "id": "rtx5080",
+            "name": "NVIDIA GeForce RTX 5080",
+            "brand": "nvidia",
+            "architecture": "Ada Next",
+            "vram": 24,
+            "boostClock": "3000",
+            "rayTracing": true,
+            "dlss": true,
+            "performance": 1.5,
+            "performance1080p": 100,
+            "performance1440p": 95,
+            "performance4k": 85,
             "price": 1199.99,
-            "recommendedPsu": 750,
-            "affiliateUrl": "https://amazon.es/dp/B0BHHTG5W7",
-            "specs": {
-                "boostClock": "2505 MHz",
-                "memorySpeed": "22.4 Gbps",
-                "rayTracingPerformance": 1.5,
-                "dlssVersion": "3.0"
-            }
+            "stock": true,
+            "asin": "BXXXXXX2",
+            "image": "/images/gpus/rtx5080.jpg",
+            "features": [
+                "Ray Tracing 5.0",
+                "DLSS 4.0",
+                "PCIe 5.0",
+                "DisplayPort 2.1"
+            ]
+        },
+        {
+            "id": "rx8900xt",
+            "name": "AMD Radeon RX 8900 XT",
+            "brand": "amd",
+            "architecture": "RDNA 5",
+            "vram": 24,
+            "boostClock": "3100",
+            "rayTracing": true,
+            "fsr": true,
+            "performance": 1.6,
+            "performance1080p": 100,
+            "performance1440p": 98,
+            "performance4k": 90,
+            "price": 1299.99,
+            "stock": true,
+            "asin": "BXXXXXX3",
+            "image": "/images/gpus/rx8900xt.jpg",
+            "features": [
+                "FSR 3.0",
+                "Ray Tracing AMD",
+                "PCIe 5.0",
+                "DisplayPort 2.1"
+            ]
+        },
+        {
+            "id": "rtx5070",
+            "name": "NVIDIA GeForce RTX 5070",
+            "brand": "nvidia",
+            "architecture": "Ada Next",
+            "vram": 16,
+            "boostClock": "2800",
+            "rayTracing": true,
+            "dlss": true,
+            "performance": 1.2,
+            "performance1080p": 100,
+            "performance1440p": 85,
+            "performance4k": 60,
+            "price": 699.99,
+            "stock": true,
+            "asin": "BXXXXXX4",
+            "image": "/images/gpus/rtx5070.jpg",
+            "features": [
+                "Ray Tracing 5.0",
+                "DLSS 4.0",
+                "PCIe 5.0",
+                "DisplayPort 2.1"
+            ]
+        },
+        {
+            "id": "rx8700xt",
+            "name": "AMD Radeon RX 8700 XT",
+            "brand": "amd",
+            "architecture": "RDNA 5",
+            "vram": 16,
+            "boostClock": "2900",
+            "rayTracing": true,
+            "fsr": true,
+            "performance": 1.3,
+            "performance1080p": 100,
+            "performance1440p": 90,
+            "performance4k": 65,
+            "price": 649.99,
+            "stock": true,
+            "asin": "BXXXXXX5",
+            "image": "/images/gpus/rx8700xt.jpg",
+            "features": [
+                "FSR 3.0",
+                "Ray Tracing AMD",
+                "PCIe 5.0",
+                "DisplayPort 2.1"
+            ]
         }
     ]
 }

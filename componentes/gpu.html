@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mejores Tarjetas Gráficas Gaming 2025 - FirstBuilds</title>
+    <meta name="description" content="Descubre las mejores GPUs para gaming en 2025. Comparativa de tarjetas NVIDIA y AMD, benchmarks y guía de compra actualizada.">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/main-nav.css">
+    <link rel="stylesheet" href="/styles/components.css">
+    
+    <!-- noUiSlider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <!-- El contenido del nav se cargará desde nav.js -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="component-hero gpu-hero">
+            <div class="container">
+                <h1>Mejores Tarjetas Gráficas Gaming 2025</h1>
+                <p class="section-description">Encuentra la GPU perfecta para tus juegos favoritos</p>
+            </div>
+        </section>
+
+        <section class="product-filters">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label>Rango de Precio</label>
+                        <div class="price-range"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Fabricante</label>
+                        <select class="brand-filter">
+                            <option value="all">Todos</option>
+                            <option value="nvidia">NVIDIA</option>
+                            <option value="amd">AMD</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>VRAM</label>
+                        <select class="vram-filter">
+                            <option value="all">Todos</option>
+                            <option value="8">8GB o menos</option>
+                            <option value="12">12GB</option>
+                            <option value="16">16GB o más</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Rendimiento</label>
+                        <select class="performance-filter">
+                            <option value="all">Todos</option>
+                            <option value="entry">1080p Gaming</option>
+                            <option value="mid">1440p Gaming</option>
+                            <option value="high">4K Gaming</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-grid">
+            <div class="container">
+                <div id="products-list" class="products-container">
+                    <!-- Los productos se cargarán dinámicamente desde gpus.json -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <!-- El contenido del footer se cargará desde main.js -->
+    </footer>
+
+    <script src="/js/nav.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/components/gpu-filter.js"></script>
+</body>
+</html>

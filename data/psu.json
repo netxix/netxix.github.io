@@ -1,0 +1,119 @@
+{
+    "psu": [
+        {
+            "id": "rm1200x",
+            "name": "Corsair RM1200x (2025)",
+            "brand": "Corsair",
+            "watts": 1200,
+            "certification": "80+ Platinum",
+            "modularity": "full",
+            "efficiency": {
+                "20": 90,
+                "50": 92,
+                "100": 89
+            },
+            "price": 249.99,
+            "stock": true,
+            "asin": "BXXXXXX1",
+            "image": "/images/psu/rm1200x.jpg",
+            "features": [
+                "Ventilador 140mm",
+                "cables tipo 5",
+                "Modo Zero RPM",
+                "12V3 Ready"
+            ]
+        },
+        {
+            "id": "thor1000",
+            "name": "ASUS ROG Thor 1000W",
+            "brand": "ASUS",
+            "watts": 1000,
+            "certification": "80+ Titanium",
+            "modularity": "full",
+            "efficiency": {
+                "20": 92,
+                "50": 94,
+                "100": 90
+            },
+            "price": 299.99,
+            "stock": true,
+            "asin": "BXXXXXX2",
+            "image": "/images/psu/thor1000.jpg",
+            "features": [
+                "Display OLED",
+                "RGB Aura Sync",
+                "Modo Zero RPM",
+                "12V3 Ready"
+            ]
+        },
+        {
+            "id": "g7-850",
+            "name": "MSI MPG A850G PCIE5",
+            "brand": "MSI",
+            "watts": 850,
+            "certification": "80+ Gold",
+            "modularity": "full",
+            "efficiency": {
+                "20": 88,
+                "50": 90,
+                "100": 87
+            },
+            "price": 149.99,
+            "stock": true,
+            "asin": "BXXXXXX3",
+            "image": "/images/psu/msi-850.jpg",
+            "features": [
+                "PCIe 5.0 Ready",
+                "Modo Zero RPM",
+                "Protección OCP",
+                "12V3 Compatible"
+            ]
+        },
+        {
+            "id": "focus-750",
+            "name": "Seasonic Focus GX-750",
+            "brand": "Seasonic",
+            "watts": 750,
+            "certification": "80+ Gold",
+            "modularity": "full",
+            "efficiency": {
+                "20": 87,
+                "50": 90,
+                "100": 87
+            },
+            "price": 119.99,
+            "stock": true,
+            "asin": "BXXXXXX4",
+            "image": "/images/psu/focus-750.jpg",
+            "features": [
+                "Condensadores japoneses",
+                "Modo Híbrido",
+                "12 años garantía",
+                "Protección OPP"
+            ]
+        },
+        {
+            "id": "b5-650",
+            "name": "EVGA B5 650W",
+            "brand": "EVGA",
+            "watts": 650,
+            "certification": "80+ Bronze",
+            "modularity": "semi",
+            "efficiency": {
+                "20": 85,
+                "50": 88,
+                "100": 85
+            },
+            "price": 79.99,
+            "stock": true,
+            "asin": "BXXXXXX5",
+            "image": "/images/psu/evga-b5.jpg",
+            "features": [
+                "Semi Modular",
+                "Modo ECO",
+                "5 años garantía",
+                "Protección OVP"
+            ]
+        }
+    ]
+}

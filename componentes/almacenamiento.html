@@ -3,232 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almacenamiento Gaming - FirstBuilds</title>
-    <meta name="description" content="Encuentra el mejor almacenamiento para tu PC gaming. Comparativas de SSDs NVMe, SATA y HDDs.">    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/main-nav.css">
-    <link rel="stylesheet" href="../styles/components.css">
-    <link rel="stylesheet" href="../styles/storage.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <title>Almacenamiento Gaming 2025 - FirstBuilds</title>
+    <meta name="description" content="Descubre los mejores SSD y HDD para gaming en 2025. Comparativas de NVMe vs SATA, velocidades y capacidades para juegos modernos.">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/main-nav.css">
+    <link rel="stylesheet" href="/styles/components.css">
+    
+    <!-- noUiSlider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.js"></script>
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>        <nav class="main-nav">
-            <div class="nav-container">
-                <div class="logo">
-                    <a href="/">FirstBuilds</a>
-                </div>
-                <ul class="nav-links">
-                    <li>
-                        <a href="../tools/fps-calculator.html">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <span>Calculadora FPS</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../tools/bottleneck-checker.html">
-                            <i class="fas fa-microchip"></i>
-                            <span>Cuello de Botella</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../tools/upgrade-advisor.html">
-                            <i class="fas fa-arrow-trend-up"></i>
-                            <span>Recomendador</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../guias.html">
-                            <i class="fas fa-book"></i>
-                            <span>Guías</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../componentes.html" class="active">
-                            <i class="fas fa-memory"></i>
-                            <span>Componentes</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="menu-container">
-                    <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú">
-                        <i class="fas fa-bars"></i>
-                        <span>Menú</span>
-                    </button>
-                    <div class="menu-dropdown" aria-hidden="true">
-                        <div class="menu-section">
-                            <h4><i class="fas fa-tools"></i> Herramientas</h4>
-                            <ul>
-                                <li>
-                                    <a href="../tools/fps-calculator.html">
-                                        <i class="fas fa-tachometer-alt"></i>
-                                        <span>Calculadora FPS</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../tools/bottleneck-checker.html">
-                                        <i class="fas fa-microchip"></i>
-                                        <span>Cuello de Botella</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../tools/upgrade-advisor.html">
-                                        <i class="fas fa-arrow-trend-up"></i>
-                                        <span>Recomendador</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="menu-section">
-                            <h4><i class="fas fa-book"></i> Recursos</h4>
-                            <ul>
-                                <li>
-                                    <a href="../guias.html">
-                                        <i class="fas fa-graduation-cap"></i>
-                                        <span>Guías</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../componentes.html">
-                                        <i class="fas fa-memory"></i>
-                                        <span>Componentes</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../contacto.html">
-                                        <i class="fas fa-envelope"></i>
-                                        <span>Contacto</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <li><a href="../guias.html">Guías</a></li>
-                <li><a href="../componentes.html" class="active">Componentes</a></li>
-            </ul>
-            <button class="menu-toggle">☰</button>
+    <header>
+        <nav class="main-nav">
+            <!-- El contenido del nav se cargará desde nav.js -->
         </nav>
     </header>
 
     <main>
-        <section class="hero components-hero">
-            <h1>Almacenamiento Gaming</h1>
-            <p>Encuentra el almacenamiento perfecto para tus juegos</p>
-        </section>
-
-        <section class="storage-comparison">
-            <div class="storage-filters">
-                <select id="type-filter">
-                    <option value="all">Todos los tipos</option>
-                    <option value="nvme">SSD NVMe</option>
-                    <option value="sata-ssd">SSD SATA</option>
-                    <option value="hdd">Disco Duro (HDD)</option>
-                </select>
-                <select id="capacity-filter">
-                    <option value="all">Todas las capacidades</option>
-                    <option value="500">500GB</option>
-                    <option value="1000">1TB</option>
-                    <option value="2000">2TB</option>
-                    <option value="4000">4TB o más</option>
-                </select>
-                <select id="price-filter">
-                    <option value="all">Todos los precios</option>
-                    <option value="budget">Económico (< 100€)</option>
-                    <option value="midrange">Gama Media (100€ - 200€)</option>
-                    <option value="highend">Gama Alta (> 200€)</option>
-                </select>
-            </div>
-
-            <div class="storage-grid">
-                <!-- El contenido se cargará dinámicamente con JavaScript -->
+        <section class="component-hero storage-hero">
+            <div class="container">
+                <h1>Almacenamiento Gaming 2025</h1>
+                <p class="section-description">SSDs ultrarrápidos y HDDs de alta capacidad para tu biblioteca de juegos</p>
             </div>
         </section>
 
-        <section class="guide-content">
-            <h2>Guía de Compra: Almacenamiento Gaming</h2>
-            
-            <h3>Tipos de Almacenamiento</h3>
-            <div class="storage-types-grid">
-                <div class="storage-type-card">
-                    <h4>SSD NVMe</h4>
-                    <ul>
-                        <li>Velocidades hasta 7000 MB/s</li>
-                        <li>Ideal para sistema operativo y juegos</li>
-                        <li>Tiempo de carga mínimo</li>
-                        <li>Mayor precio por GB</li>
-                    </ul>
-                </div>
-                <div class="storage-type-card">
-                    <h4>SSD SATA</h4>
-                    <ul>
-                        <li>Velocidades hasta 560 MB/s</li>
-                        <li>Buena opción económica</li>
-                        <li>Compatible con cualquier PC</li>
-                        <li>Precio moderado por GB</li>
-                    </ul>
-                </div>
-                <div class="storage-type-card">
-                    <h4>Disco Duro (HDD)</h4>
-                    <ul>
-                        <li>Velocidades hasta 200 MB/s</li>
-                        <li>Ideal para almacenamiento masivo</li>
-                        <li>Menor precio por GB</li>
-                        <li>Mayor tiempo de carga</li>
-                    </ul>
+        <section class="product-filters">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label>Rango de Precio</label>
+                        <div class="price-range"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Tipo</label>
+                        <select class="type-filter">
+                            <option value="all">Todos</option>
+                            <option value="nvme">SSD NVMe</option>
+                            <option value="sata">SSD SATA</option>
+                            <option value="hdd">HDD</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Capacidad</label>
+                        <select class="capacity-filter">
+                            <option value="all">Todas</option>
+                            <option value="500">500GB - 1TB</option>
+                            <option value="2000">2TB - 4TB</option>
+                            <option value="4000">Más de 4TB</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Uso</label>
+                        <select class="usage-filter">
+                            <option value="all">Todos</option>
+                            <option value="os">Sistema Operativo</option>
+                            <option value="games">Juegos</option>
+                            <option value="storage">Almacenamiento</option>
+                        </select>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <h3>Recomendaciones por Uso</h3>
-            <div class="recommendations-list">
-                <div class="recommendation">
-                    <h4>Sistema Operativo</h4>
-                    <p>SSD NVMe de 500GB-1TB para máximo rendimiento</p>
-                </div>
-                <div class="recommendation">
-                    <h4>Juegos Favoritos</h4>
-                    <p>SSD NVMe o SATA de 1TB-2TB para tiempos de carga rápidos</p>
-                </div>
-                <div class="recommendation">
-                    <h4>Biblioteca de Juegos</h4>
-                    <p>HDD de 2TB-4TB para juegos menos jugados</p>
-                </div>
-                <div class="recommendation">
-                    <h4>Configuración Óptima</h4>
-                    <p>Combina un SSD NVMe para SO + SSD SATA para juegos + HDD para almacenamiento</p>
+        <section class="products-grid">
+            <div class="container">
+                <div id="products-list" class="products-container">
+                    <!-- Los productos se cargarán dinámicamente desde storage.json -->
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>FirstBuilds</h4>
-                <p>Tu guía para armar tu primera PC gaming</p>
-            </div>
-            <div class="footer-section">
-                <h4>Herramientas</h4>
-                <ul>
-                    <li><a href="../tools/fps-calculator.html">Calculadora FPS</a></li>
-                    <li><a href="../tools/bottleneck-checker.html">Detector Cuello de Botella</a></li>
-                    <li><a href="../tools/upgrade-advisor.html">Recomendador</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Recursos</h4>
-                <ul>
-                    <li><a href="../guias.html">Guías</a></li>
-                    <li><a href="../componentes.html">Componentes</a></li>
-                    <li><a href="../contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 FirstBuilds. Todos los derechos reservados.</p>
-        </div>
-    </footer>    <script src="../js/main.js"></script>
-    <script src="../js/nav.js"></script>
-    <script src="../js/storage-filter.js"></script>
+    <footer class="site-footer">
+        <!-- El contenido del footer se cargará desde main.js -->
+    </footer>
+
+    <script src="/js/nav.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/components/storage-filter.js"></script>
+    <script src="/js/affiliate-tools.js"></script>
 </body>
 </html>

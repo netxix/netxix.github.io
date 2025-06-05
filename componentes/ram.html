@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria RAM Gaming 2025 - FirstBuilds</title>
+    <meta name="description" content="Encuentra la mejor memoria RAM para gaming en 2025. Comparativa de DDR4 vs DDR5, latencias y velocidades óptimas para gaming.">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/main-nav.css">
+    <link rel="stylesheet" href="/styles/components.css">
+    
+    <!-- noUiSlider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <!-- El contenido del nav se cargará desde nav.js -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="component-hero ram-hero">
+            <div class="container">
+                <h1>Memoria RAM Gaming 2025</h1>
+                <p class="section-description">Elige la RAM perfecta para tu PC gaming con las últimas tecnologías DDR5</p>
+            </div>
+        </section>
+
+        <section class="product-filters">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label>Rango de Precio</label>
+                        <div class="price-range"></div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Tipo</label>
+                        <select class="type-filter">
+                            <option value="all">Todos</option>
+                            <option value="ddr4">DDR4</option>
+                            <option value="ddr5">DDR5</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Capacidad</label>
+                        <select class="capacity-filter">
+                            <option value="all">Todas</option>
+                            <option value="16">16GB</option>
+                            <option value="32">32GB</option>
+                            <option value="64">64GB o más</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Velocidad</label>
+                        <select class="speed-filter">
+                            <option value="all">Todas</option>
+                            <option value="ddr4-3200">DDR4-3200</option>
+                            <option value="ddr4-3600">DDR4-3600</option>
+                            <option value="ddr5-5200">DDR5-5200</option>
+                            <option value="ddr5-6000">DDR5-6000+</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-grid">
+            <div class="container">
+                <div id="products-list" class="products-container">
+                    <!-- Los productos se cargarán dinámicamente desde ram.json -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <!-- El contenido del footer se cargará desde main.js -->
+    </footer>
+
+    <script src="/js/nav.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/components/ram-filter.js"></script>
+    <script src="/js/affiliate-tools.js"></script>
+</body>
+</html>
